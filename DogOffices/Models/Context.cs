@@ -9,12 +9,13 @@ namespace DogOffices.Models
     public class Context : DbContext
     {
         public DbSet<Company> Companies { get; set; }
+        public DbSet<Dog> Dogs { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Company>().HasData(
-                new Company() { Id = 1, CompanyName = "Viva Spanish", Address = "1234 Main Street", City = "Willoughby", State = "Ohio", ZipCode = 44094, WebsiteUrl = "www.vivaspanish.com", Description = "Viva Spanish provides Spanish language programs for non-public K-8 Ohio Schools. Super dog friendly. At any give time there may be 4 dogs in the office." }
+                new Company() { CompanyId = 1, CompanyName = "Viva Spanish", CompanyAddress = "1234 Main Street", CompanyCity = "Willoughby", CompanyState = "Ohio", CompanyZipCode = 44094, CompanyWebsiteUrl = "www.vivaspanish.com", CompanyDescription = "Viva Spanish provides Spanish language programs for non-public K-8 Ohio Schools. Super dog friendly. At any give time there may be 4 dogs in the office." }
                 );
 
 

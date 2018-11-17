@@ -16,22 +16,25 @@
                 @Html.DisplayNameFor(model => model.CompanyName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.WebsiteUrl)
+                @Html.DisplayNameFor(model => model.CompanyWebsiteUrl)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model.CompanyDescription)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Address)
+                @Html.DisplayNameFor(model => model.CompanyAddress)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.City)
+                @Html.DisplayNameFor(model => model.CompanyCity)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.State)
+                @Html.DisplayNameFor(model => model.CompanyState)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ZipCode)
+                @Html.DisplayNameFor(model => model.CompanyZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompanyDogId)
             </th>
             <th></th>
         </tr>
@@ -43,27 +46,30 @@
                 @Html.DisplayFor(modelItem => item.CompanyName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.WebsiteUrl)
+                @Html.DisplayFor(modelItem => item.CompanyWebsiteUrl)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @Html.DisplayFor(modelItem => item.CompanyDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
+                @Html.DisplayFor(modelItem => item.CompanyAddress)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.City)
+                @Html.DisplayFor(modelItem => item.CompanyCity)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.State)
+                @Html.DisplayFor(modelItem => item.CompanyState)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ZipCode)
+                @Html.DisplayFor(modelItem => item.CompanyZipCode)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                @Html.DisplayFor(modelItem => item.CompanyDogId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CompanyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CompanyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CompanyId">Delete</a>
             </td>
         </tr>
 }

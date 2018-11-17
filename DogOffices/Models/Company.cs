@@ -8,18 +8,31 @@ namespace DogOffices.Models
 {
     public class Company
     {
-        public int Id { get; set; }
+        public int CompanyId { get; set; }
 
         [DisplayName("Company Name")]
         public string CompanyName { get; set; }
 
         [DisplayName("Website")]
-        public string WebsiteUrl { get; set; }
+        public string CompanyWebsiteUrl { get; set; }
 
-        public string Description { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public int ZipCode { get; set; }
+        [DisplayName("About the Company")]
+        public string CompanyDescription { get; set; }
+
+        [DisplayName("Address")]
+        public string CompanyAddress { get; set; }
+
+        [DisplayName("City")]
+        public string CompanyCity { get; set; }
+
+        [DisplayName("State")]
+        public string CompanyState { get; set; }
+
+        [DisplayName("ZIP Code")]
+        public int CompanyZipCode { get; set; }
+
+        [DisplayName("Dogs")]
+        public List<Dog> CompanyDogs { get; set; }
+        public int CompanyDogId { get; set; }
     }
 }
